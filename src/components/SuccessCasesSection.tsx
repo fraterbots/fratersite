@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Trophy, Sparkles, Bot, MessageCircle, Cpu, Settings, Zap, Target, Globe, Sun, Heart, Scissors, Smile, Users } from "lucide-react";
@@ -125,55 +124,58 @@ const SuccessCasesSection = () => {
           </p>
         </div>
 
-        <Carousel
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-          className="w-full max-w-7xl mx-auto"
-        >
-          <CarouselContent className="-ml-2 md:-ml-4">
-            {successCases.map((case_, index) => (
-              <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-                <Card className="hover-lift transition-all duration-300 bg-card group border-primary/30 h-full">
-                  <CardHeader>
-                    <div className="flex items-center gap-3">
-                      <div className="relative">
-                        <case_.icon className="h-8 w-8 text-primary animate-float" />
-                        <case_.sparkle className="absolute -top-1 -right-1 h-4 w-4 text-primary animate-pulse" />
-                      </div>
-                      <div>
-                        <CardTitle className="text-lg text-white">{case_.title}</CardTitle>
-                        <CardDescription className="flex items-center gap-2 text-gray-200">
-                          <case_.categoryIcon className="h-4 w-4 text-primary" />
-                          {case_.category}
-                        </CardDescription>
-                      </div>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-4">
-                      <p className="text-sm text-gray-200">
-                        <case_.techIcon className="inline mr-2 h-4 w-4 text-primary" />
-                        {case_.description}
-                      </p>
-                      <div className="grid grid-cols-2 gap-4">
-                        {case_.metrics.map((metric, metricIndex) => (
-                          <div key={metricIndex} className="text-center group-hover:animate-pulse">
-                            <div className="text-2xl font-bold text-primary">{metric.value}</div>
-                            <div className="text-xs text-gray-200">{metric.label}</div>
+        {/* Ajustando o container para evitar corte lateral */}
+        <div className="pb-8 pt-4 px-4 md:px-16">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full max-w-6xl mx-auto"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {successCases.map((case_, index) => (
+                <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                  <div className="py-3 px-2 h-full">
+                    <Card className="transition-all duration-300 bg-card group border-primary/30 h-full min-h-[320px] flex flex-col hover:transform hover:translate-y-[-8px] hover:scale-[1.02] hover:shadow-xl hover:shadow-primary/20">
+                      <CardHeader className="flex-shrink-0 pb-4">
+                        <div className="flex items-center gap-3">
+                          <div className="relative">
+                            <case_.icon className="h-8 w-8 text-primary animate-float" />
+                            <case_.sparkle className="absolute -top-1 -right-1 h-4 w-4 text-primary animate-pulse" />
                           </div>
-                        ))}
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious className="hidden md:flex -left-16 h-12 w-12 bg-primary/20 border-primary/50 hover:bg-primary/30 hover:border-primary text-primary shadow-lg backdrop-blur-sm" />
-          <CarouselNext className="hidden md:flex -right-16 h-12 w-12 bg-primary/20 border-primary/50 hover:bg-primary/30 hover:border-primary text-primary shadow-lg backdrop-blur-sm" />
-        </Carousel>
+                          <div>
+                            <CardTitle className="text-lg text-white">{case_.title}</CardTitle>
+                            <CardDescription className="flex items-center gap-2 text-gray-200">
+                              <case_.categoryIcon className="h-4 w-4 text-primary" />
+                              {case_.category}
+                            </CardDescription>
+                          </div>
+                        </div>
+                      </CardHeader>
+                      <CardContent className="flex-1 flex flex-col pt-0 pb-4">
+                        <p className="text-sm text-gray-200 mb-4 flex-1">
+                          <case_.techIcon className="inline mr-2 h-4 w-4 text-primary" />
+                          {case_.description}
+                        </p>
+                        <div className="grid grid-cols-2 gap-4">
+                          {case_.metrics.map((metric, metricIndex) => (
+                            <div key={metricIndex} className="text-center group-hover:animate-pulse">
+                              <div className="text-2xl font-bold text-primary">{metric.value}</div>
+                              <div className="text-xs text-gray-200">{metric.label}</div>
+                            </div>
+                          ))}
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex -left-12 h-12 w-12 bg-primary/20 border-primary/50 hover:bg-primary/30 hover:border-primary text-primary shadow-lg backdrop-blur-sm" />
+            <CarouselNext className="hidden md:flex -right-12 h-12 w-12 bg-primary/20 border-primary/50 hover:bg-primary/30 hover:border-primary text-primary shadow-lg backdrop-blur-sm" />
+          </Carousel>
+        </div>
       </div>
     </section>
   );
