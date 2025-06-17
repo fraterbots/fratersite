@@ -1,8 +1,26 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Trophy, Sparkles, Bot, MessageCircle, Cpu, Settings, Zap, Target, Globe, Sun, Heart, Scissors, Smile, Users } from "lucide-react";
+import { Trophy, Sparkles, Bot, MessageCircle, Cpu, Settings, Zap, Target, Globe, Sun, Heart, Scissors, Smile, Users, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState, useEffect } from "react";
 
 const SuccessCasesSection = () => {
+  const [api, setApi] = useState<any>();
+  const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap() + 1);
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap() + 1);
+    });
+  }, [api]);
+
   const successCases = [
     {
       icon: Trophy,
@@ -124,9 +142,19 @@ const SuccessCasesSection = () => {
           </p>
         </div>
 
+        {/* Dica visual para mobile */}
+        <div className="md:hidden text-center mb-4">
+          <div className="flex items-center justify-center gap-2 text-sm text-gray-300 animate-pulse">
+            <ChevronLeft className="h-4 w-4" />
+            <span>Deslize para ver mais cases</span>
+            <ChevronRight className="h-4 w-4" />
+          </div>
+        </div>
+
         {/* Ajustando o container para evitar corte lateral */}
         <div className="pb-8 pt-4 px-4 md:px-16">
           <Carousel
+            setApi={setApi}
             opts={{
               align: "start",
               loop: true,
@@ -175,6 +203,19 @@ const SuccessCasesSection = () => {
             <CarouselPrevious className="hidden md:flex -left-12 h-12 w-12 bg-primary/20 border-primary/50 hover:bg-primary/30 hover:border-primary text-primary shadow-lg backdrop-blur-sm" />
             <CarouselNext className="hidden md:flex -right-12 h-12 w-12 bg-primary/20 border-primary/50 hover:bg-primary/30 hover:border-primary text-primary shadow-lg backdrop-blur-sm" />
           </Carousel>
+        </div>
+
+        {/* Indicadores de pontos para mobile */}
+        <div className="md:hidden flex justify-center mt-4 gap-2">
+          {Array.from({ length: count }).map((_, index) => (
+            <button
+              key={index}
+              className={`w-2 h-2 rounded-full transition-all duration-200 ${
+                index === current - 1 ? 'bg-primary' : 'bg-gray-600'
+              }`}
+              onClick={() => api?.scrollTo(index)}
+            />
+          ))}
         </div>
       </div>
     </section>
