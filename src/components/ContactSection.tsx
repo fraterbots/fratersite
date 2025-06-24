@@ -22,9 +22,9 @@ const ContactSection = () => {
     }));
   };
 
-  const handleWhatsAppClick = (number: string) => {
+  const handleWhatsAppClick = () => {
     const message = encodeURIComponent("Olá! Gostaria de saber mais sobre os chatbots da FraterBots!");
-    const whatsappUrl = `https://wa.me/${number}?text=${message}`;
+    const whatsappUrl = `https://wa.me/5538991003466?text=${message}`;
     window.open(whatsappUrl, '_blank');
   };
 
@@ -218,20 +218,12 @@ const ContactSection = () => {
                     </div>
                     <div className="flex items-center gap-3">
                       <Phone className="h-5 w-5 text-primary" />
-                      <div className="flex flex-col">
-                        <button 
-                          onClick={() => handleWhatsAppClick("5538988358431")}
-                          className="hover:text-primary transition-colors cursor-pointer text-gray-200 text-left"
-                        >
-                          +55 (38) 98835-8431
-                        </button>
-                        <button 
-                          onClick={() => handleWhatsAppClick("5538999173178")}
-                          className="hover:text-primary transition-colors cursor-pointer text-gray-200 text-left"
-                        >
-                          +55 (38) 99917-3178
-                        </button>
-                      </div>
+                      <button 
+                        onClick={handleWhatsAppClick}
+                        className="hover:text-primary transition-colors cursor-pointer text-gray-200"
+                      >
+                        +55 (38) 99100-3466
+                      </button>
                     </div>
                     <div className="flex items-center gap-3">
                       <MapPin className="h-5 w-5 text-primary" />

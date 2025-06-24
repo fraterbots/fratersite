@@ -28,13 +28,13 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 container mx-auto px-4 min-h-screen flex flex-col justify-center">
-        {/* Top Badge */}
-        <div className="text-center mb-8 animate-slide-up">
-          <Badge variant="outline" className="border-primary/80 text-primary bg-primary/10 backdrop-blur-sm px-6 py-2 text-sm animate-bounce-in">
-            <Sparkles className="mr-2 h-4 w-4 animate-pulse text-primary" />
-            <Zap className="mr-2 h-3 w-3 text-primary" />
-            Converse. Encante. Converta.
+      <div className="relative z-10 container mx-auto px-4 min-h-screen flex flex-col justify-center pt-32 pb-16">
+        {/* Top Badge - Posicionamento seguro */}
+        <div className="text-center mb-16 animate-slide-up">
+          <Badge variant="outline" className="border-primary/80 text-primary bg-primary/10 backdrop-blur-sm px-6 py-3 text-sm md:text-base animate-bounce-in inline-flex items-center gap-2">
+            <Sparkles className="h-4 w-4 animate-pulse text-primary" />
+            <Zap className="h-3 w-3 text-primary" />
+            <span className="font-semibold">Converse. Encante. Converta.</span>
           </Badge>
         </div>
 

@@ -3,9 +3,9 @@ import { Bot, Mail, Phone, MapPin, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
-  const handleWhatsAppClick = (number: string) => {
+  const handleWhatsAppClick = () => {
     const message = encodeURIComponent("Olá! Gostaria de saber mais sobre os chatbots da FraterBots!");
-    const whatsappUrl = `https://wa.me/${number}?text=${message}`;
+    const whatsappUrl = `https://wa.me/5538991003466?text=${message}`;
     window.open(whatsappUrl, '_blank');
   };
 
@@ -83,19 +83,10 @@ const Footer = () => {
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-primary" />
                 <button 
-                  onClick={() => handleWhatsAppClick("5538988358431")}
+                  onClick={handleWhatsAppClick}
                   className="hover:text-primary transition-colors cursor-pointer"
                 >
-                  +55 (38) 98835-8431
-                </button>
-              </li>
-              <li className="flex items-center gap-2">
-                <Phone className="h-4 w-4 text-primary" />
-                <button 
-                  onClick={() => handleWhatsAppClick("5538999173178")}
-                  className="hover:text-primary transition-colors cursor-pointer"
-                >
-                  +55 (38) 99917-3178
+                  +55 (38) 99100-3466
                 </button>
               </li>
               <li className="flex items-center gap-2">
