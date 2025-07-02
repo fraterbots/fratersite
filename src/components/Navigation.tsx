@@ -33,7 +33,7 @@ const Navigation = ({ activeSection, scrollToSection }: NavigationProps) => {
           <div className="flex items-center gap-4">
             <div className="relative">
               <img 
-                src="/lovable-uploads/f692b86b-94dc-495a-a72c-ed2327a6fe03.png" 
+                src="/156d7784-a212-45ae-8f84-f87a99177b8a.png" 
                 alt="FraterBots Logo" 
                 className="h-12 md:h-16 w-auto object-contain transition-all duration-300 hover:scale-105"
               />
