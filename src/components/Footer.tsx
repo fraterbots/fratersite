@@ -30,7 +30,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center gap-3">
               <img 
-                src="/lovable-uploads/c8b5c903-7ea7-4e7c-a757-e7c62db2550d.png" 
+                src="/lovable-uploads/357358c2-8fb6-4288-b5d9-dd92bb3c9f7c.png" 
                 alt="FraterBots Logo" 
                 className="h-16 w-auto object-contain"
               />
