@@ -8,6 +8,7 @@ import SuccessCasesSection from "@/components/SuccessCasesSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import FloatingWhatsAppButton from "@/components/FloatingWhatsAppButton";
+import FloatingInstagramButton from "@/components/FloatingInstagramButton";
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState("home");
@@ -28,6 +29,7 @@ const Index = () => {
       <ContactSection />
       <Footer />
       <FloatingWhatsAppButton />
+      <FloatingInstagramButton />
     </div>
   );
 };

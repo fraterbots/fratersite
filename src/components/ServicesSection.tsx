@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Bot, MessageCircle, Cog, ChevronRight, Instagram, Sparkles, Brain, Link as LinkIcon, Zap } from "lucide-react";
+import { Bot, MessageCircle, Cog, ChevronRight, Instagram, Sparkles, Brain, Link as LinkIcon, Zap, Globe, Palette } from "lucide-react";
 
 const ServicesSection = () => {
   return (
@@ -12,8 +12,11 @@ const ServicesSection = () => {
             <Cog className="inline mr-3 h-8 w-8 text-primary animate-spin" />
             Nossos Serviços
           </h2>
-          <p className="text-xl text-gray-200">
+          <p className="text-xl text-gray-200 mb-4">
             Soluções completas em automação e chatbots para WhatsApp, Instagram e outras plataformas
+          </p>
+          <p className="text-lg text-primary font-semibold">
+            💡 Podemos integrar todos os serviços oferecidos com um desconto especial!
           </p>
         </div>
 
@@ -39,7 +42,7 @@ const ServicesSection = () => {
                 </li>
                 <li className="flex items-center gap-2">
                   <ChevronRight className="h-4 w-4 text-primary" />
-                  <span className="text-sm text-gray-200">Integração nativa com WhatsApp Business</span>
+                  <span className="text-sm text-gray-200">Integração com WhatsApp Business</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <ChevronRight className="h-4 w-4 text-primary" />
@@ -47,7 +50,7 @@ const ServicesSection = () => {
                 </li>
                 <li className="flex items-center gap-2">
                   <ChevronRight className="h-4 w-4 text-primary" />
-                  <span className="text-sm text-gray-200">Dashboard de analytics</span>
+                  <span className="text-sm text-gray-200">Integração com as principais IA's</span>
                 </li>
               </ul>
             </CardContent>
@@ -91,41 +94,6 @@ const ServicesSection = () => {
           <Card className="hover-lift transition-all duration-300 bg-card border-primary/30 group">
             <CardHeader>
               <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4 group-hover:animate-pulse">
-                <Zap className="h-6 w-6 text-primary" />
-              </div>
-              <CardTitle className="flex items-center gap-2 text-white">
-                <Brain className="h-5 w-5 text-primary" />
-                Chatbots com IA
-              </CardTitle>
-              <CardDescription className="text-gray-200">
-                Agentes de IA avançados que aprendem e evoluem com seu negócio
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <ul className="space-y-2">
-                <li className="flex items-center gap-2">
-                  <ChevronRight className="h-4 w-4 text-primary" />
-                  <span className="text-sm text-gray-200">Processamento de linguagem natural</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <ChevronRight className="h-4 w-4 text-primary" />
-                  <span className="text-sm text-gray-200">Aprendizado contínuo</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <ChevronRight className="h-4 w-4 text-primary" />
-                  <span className="text-sm text-gray-200">Personalização avançada</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <ChevronRight className="h-4 w-4 text-primary" />
-                  <span className="text-sm text-gray-200">Análise de sentimentos</span>
-                </li>
-              </ul>
-            </CardContent>
-          </Card>
-
-          <Card className="hover-lift transition-all duration-300 bg-card border-primary/30 group">
-            <CardHeader>
-              <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4 group-hover:animate-pulse">
                 <LinkIcon className="h-6 w-6 text-primary" />
               </div>
               <CardTitle className="flex items-center gap-2 text-white">
@@ -153,6 +121,41 @@ const ServicesSection = () => {
                 <li className="flex items-center gap-2">
                   <ChevronRight className="h-4 w-4 text-primary" />
                   <span className="text-sm text-gray-200">Sincronização de dados</span>
+                </li>
+              </ul>
+            </CardContent>
+          </Card>
+
+          <Card className="hover-lift transition-all duration-300 bg-card border-primary/30 group">
+            <CardHeader>
+              <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-4 group-hover:animate-pulse">
+                <Palette className="h-6 w-6 text-primary" />
+              </div>
+              <CardTitle className="flex items-center gap-2 text-white">
+                <Globe className="h-5 w-5 text-primary" />
+                Criação de Landing Pages
+              </CardTitle>
+              <CardDescription className="text-gray-200">
+                Desenvolva páginas otimizadas para conversão e integradas aos seus chatbots
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <ul className="space-y-2">
+                <li className="flex items-center gap-2">
+                  <ChevronRight className="h-4 w-4 text-primary" />
+                  <span className="text-sm text-gray-200">Design responsivo e moderno</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <ChevronRight className="h-4 w-4 text-primary" />
+                  <span className="text-sm text-gray-200">Otimização para conversão</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <ChevronRight className="h-4 w-4 text-primary" />
+                  <span className="text-sm text-gray-200">Integração com chatbots</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <ChevronRight className="h-4 w-4 text-primary" />
+                  <span className="text-sm text-gray-200">Analytics e acompanhamento</span>
                 </li>
               </ul>
             </CardContent>

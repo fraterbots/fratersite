@@ -8,6 +8,12 @@ interface HeroSectionProps {
 }
 
 const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
+  const handleWhatsAppClick = () => {
+    const message = encodeURIComponent("Olá! Gostaria de conversar com o FraterAssist sobre os chatbots da FraterBots!");
+    const whatsappUrl = `https://wa.me/5538991003466?text=${message}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <section id="home" className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       {/* Animated Background */}
@@ -28,13 +34,13 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 container mx-auto px-4 min-h-screen flex flex-col justify-center pt-32 pb-16">
-        {/* Top Badge - Posicionamento seguro */}
-        <div className="text-center mb-16 animate-slide-up">
-          <Badge variant="outline" className="border-primary/80 text-primary bg-primary/10 backdrop-blur-sm px-6 py-3 text-sm md:text-base animate-bounce-in inline-flex items-center gap-2">
-            <Sparkles className="h-4 w-4 animate-pulse text-primary" />
-            <Zap className="h-3 w-3 text-primary" />
-            <span className="font-semibold">Converse. Encante. Converta.</span>
+      <div className="relative z-10 container mx-auto px-4 min-h-screen flex flex-col justify-center">
+        {/* Top Badge - Movido mais para baixo */}
+        <div className="text-center mb-8 animate-slide-up pt-20 md:pt-24">
+          <Badge variant="outline" className="border-primary/80 text-primary bg-primary/10 backdrop-blur-sm px-6 py-2 text-sm animate-bounce-in">
+            <Sparkles className="mr-2 h-4 w-4 animate-pulse text-primary" />
+            <Zap className="mr-2 h-3 w-3 text-primary" />
+            Converse. Encante. Converta.
           </Badge>
         </div>
 
@@ -66,11 +72,11 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-8 animate-fade-in" style={{animationDelay: '2s'}}>
             <Button 
               size="lg" 
-              onClick={() => scrollToSection("contato")} 
+              onClick={() => scrollToSection("casos")}
               className="bg-gradient-to-r from-primary to-green-500 hover:from-primary/90 hover:to-green-600 text-black font-bold shadow-2xl hover:shadow-primary/25 hover-lift group border-0 px-12 py-6 text-lg rounded-full"
             >
-              <Target className="mr-3 h-6 w-6 group-hover:scale-110 transition-transform text-black" />
-              Demonstração Gratuita
+              <MessageCircle className="mr-3 h-6 w-6 group-hover:scale-110 transition-transform text-black" />
+              Transforme Seu Atendimento
               <ChevronRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform text-black" />
             </Button>
             <Button 
@@ -120,7 +126,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
           </div>
         </div>
 
-        <div className="absolute bottom-40 left-4 animate-float hidden xl:block" style={{animationDelay: '3s'}}>
+        <div className="absolute bottom-60 left-4 animate-float hidden xl:block" style={{animationDelay: '3s'}}>
           <div className="bg-gradient-to-br from-slate-800/95 to-slate-900/95 backdrop-blur-xl rounded-2xl p-4 border border-primary/30 shadow-xl max-w-xs">
             <div className="flex items-center gap-3 mb-3">
               <div className="w-8 h-8 bg-gradient-to-r from-green-400 to-primary rounded-full flex items-center justify-center">
@@ -137,8 +143,8 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
           </div>
         </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        {/* Scroll Indicator - Movido para cima para não sobrepor os botões */}
+        <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 animate-bounce">
           <button 
             onClick={() => scrollToSection("sobre")}
             className="text-primary hover:text-green-400 transition-colors group"
@@ -146,12 +152,6 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
             <ArrowDown className="h-8 w-8 group-hover:scale-110 transition-transform" />
           </button>
         </div>
-      </div>
-
-      {/* Company Badge */}
-      <div className="absolute bottom-4 left-4 bg-gradient-to-r from-slate-800/90 to-slate-900/90 backdrop-blur-sm rounded-lg px-4 py-2 border border-primary/30">
-        <p className="text-primary font-semibold text-sm">FraterBots</p>
-        <p className="text-gray-300 text-xs">Dois irmãos, uma revolução</p>
       </div>
     </section>
   );

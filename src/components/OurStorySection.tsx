@@ -1,29 +1,8 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Users, Heart, Lightbulb, Target, Handshake, Award } from "lucide-react";
+import { Users, Heart, Target, Handshake } from "lucide-react";
 
 const OurStorySection = () => {
-  const storyMilestones = [
-    {
-      icon: Lightbulb,
-      year: "2023",
-      title: "Início da Jornada",
-      description: "Identificamos a necessidade de automatização no atendimento de pequenas e médias empresas."
-    },
-    {
-      icon: Users,
-      year: "2024",
-      title: "Primeiros Clientes",
-      description: "Desenvolvemos soluções personalizadas para nossos primeiros clientes, focando em resultados reais."
-    },
-    {
-      icon: Award,
-      year: "Hoje",
-      title: "Transformando Negócios",
-      description: "Já ajudamos dezenas de empresas a revolucionar seu atendimento digital com chatbots inteligentes."
-    }
-  ];
-
   return (
     <section id="nossa-historia" className="py-16 relative">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(25,20,61,0.1),transparent_50%)]"></div>
@@ -71,30 +50,6 @@ const OurStorySection = () => {
                 </ul>
               </CardContent>
             </Card>
-          </div>
-
-          <div className="space-y-8">
-            <h3 className="text-2xl font-bold text-center text-white mb-8">Nossa Trajetória</h3>
-            <div className="grid md:grid-cols-3 gap-6">
-              {storyMilestones.map((milestone, index) => (
-                <Card key={index} className="hover-lift bg-card border-primary/30 text-center">
-                  <CardHeader>
-                    <div className="mx-auto mb-4">
-                      <milestone.icon className="h-12 w-12 text-primary animate-float" />
-                    </div>
-                    <CardTitle className="text-primary text-lg">{milestone.year}</CardTitle>
-                    <CardDescription className="text-white font-semibold">
-                      {milestone.title}
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-gray-200 text-sm">
-                      {milestone.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
           </div>
 
           <div className="mt-12 text-center">

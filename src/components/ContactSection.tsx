@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Mail, Rocket, Users, Phone, Settings, MessageCircle, Bot, ChevronRight, Brain, Shield, MapPin } from "lucide-react";
@@ -22,18 +23,19 @@ const ContactSection = () => {
     }));
   };
 
-  const handleWhatsAppClick = () => {
-    const message = encodeURIComponent("Olá! Gostaria de saber mais sobre os chatbots da FraterBots!");
-    const whatsappUrl = `https://wa.me/5538991003466?text=${message}`;
-    window.open(whatsappUrl, '_blank');
-  };
-
   const handleEmailClick = () => {
     const email = "fraterbots@gmail.com";
     const subject = encodeURIComponent("Interesse nos serviços da FraterBots");
     const body = encodeURIComponent("Olá! Gostaria de saber mais sobre os chatbots da FraterBots!");
     const mailtoUrl = `mailto:${email}?subject=${subject}&body=${body}`;
     window.open(mailtoUrl, '_blank');
+  };
+
+  const handleWhatsAppClick = () => {
+    const whatsappNumber = "5538991003466";
+    const message = encodeURIComponent("Olá! Gostaria de saber mais sobre os chatbots da FraterBots!");
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
+    window.open(whatsappUrl, '_blank');
   };
 
   const handleMapsClick = () => {
@@ -75,7 +77,7 @@ const ContactSection = () => {
 
       toast({
         title: "Solicitação Enviada!",
-        description: "Sua solicitação de demonstração foi enviada com sucesso. Entraremos em contato em breve!",
+        description: "Sua solicitação foi enviada com sucesso. Entraremos em contato em breve!",
       });
 
       // Limpar formulário após envio
@@ -109,7 +111,7 @@ const ContactSection = () => {
               Entre em Contato
             </h2>
             <p className="text-xl text-gray-200">
-              Pronto para transformar seu negócio? Solicite uma demonstração gratuita!
+              Pronto para transformar seu negócio? Solicite contato de um de nossos especialistas!
             </p>
           </div>
 
@@ -118,7 +120,7 @@ const ContactSection = () => {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-white">
                   <Rocket className="h-5 w-5 text-primary animate-pulse" />
-                  Solicite uma demonstração grátis
+                  Solicite contato de um de nossos especialistas
                 </CardTitle>
                 <CardDescription className="text-gray-200">
                   Vamos mostrar como nossos chatbots podem revolucionar seu atendimento no WhatsApp e Instagram
@@ -192,7 +194,7 @@ const ContactSection = () => {
                     size="lg"
                   >
                     <Bot className="mr-2 h-4 w-4 text-black" />
-                    {isLoading ? "Enviando..." : "Solicitar demonstração grátis"}
+                    {isLoading ? "Enviando..." : "Solicitar contato"}
                     <ChevronRight className="ml-2 h-4 w-4 text-black" />
                   </Button>
                 </form>

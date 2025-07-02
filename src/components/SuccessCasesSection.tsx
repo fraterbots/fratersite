@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Trophy, Sparkles, Bot, MessageCircle, Cpu, Settings, Zap, Target, Globe, Sun, Heart, Scissors, Smile, Users, ChevronLeft, ChevronRight } from "lucide-react";
@@ -151,8 +152,8 @@ const SuccessCasesSection = () => {
           </div>
         </div>
 
-        {/* Ajustando o container para evitar corte lateral */}
-        <div className="pb-8 pt-4 px-4 md:px-16">
+        {/* Container com padding generoso para evitar corte das sombras */}
+        <div className="pb-16 pt-12 px-12 md:px-24 lg:px-32">
           <Carousel
             setApi={setApi}
             opts={{
@@ -164,7 +165,7 @@ const SuccessCasesSection = () => {
             <CarouselContent className="-ml-2 md:-ml-4">
               {successCases.map((case_, index) => (
                 <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-                  <div className="py-3 px-2 h-full">
+                  <div className="py-8 px-6 h-full">
                     <Card className="transition-all duration-300 bg-card group border-primary/30 h-full min-h-[320px] flex flex-col hover:transform hover:translate-y-[-8px] hover:scale-[1.02] hover:shadow-xl hover:shadow-primary/20">
                       <CardHeader className="flex-shrink-0 pb-4">
                         <div className="flex items-center gap-3">
@@ -200,8 +201,8 @@ const SuccessCasesSection = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden md:flex -left-12 h-12 w-12 bg-primary/20 border-primary/50 hover:bg-primary/30 hover:border-primary text-primary shadow-lg backdrop-blur-sm" />
-            <CarouselNext className="hidden md:flex -right-12 h-12 w-12 bg-primary/20 border-primary/50 hover:bg-primary/30 hover:border-primary text-primary shadow-lg backdrop-blur-sm" />
+            <CarouselPrevious className="hidden md:flex -left-20 h-12 w-12 bg-primary/20 border-primary/50 hover:bg-primary/30 hover:border-primary text-primary shadow-lg backdrop-blur-sm" />
+            <CarouselNext className="hidden md:flex -right-20 h-12 w-12 bg-primary/20 border-primary/50 hover:bg-primary/30 hover:border-primary text-primary shadow-lg backdrop-blur-sm" />
           </Carousel>
         </div>
 

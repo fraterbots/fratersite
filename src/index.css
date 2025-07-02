@@ -224,3 +224,47 @@
 .animate-glow {
   animation: glow 2s ease-in-out infinite;
 }
+
+/* Transições suaves personalizadas para botões */
+.btn-smooth {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+}
+
+.btn-smooth:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.btn-smooth:active {
+  transform: translateY(0) scale(0.98);
+  transition: all 0.1s ease-in-out;
+}
+
+/* Transições para elementos clicáveis */
+.clickable {
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.clickable:hover {
+  transform: scale(1.02);
+}
+
+.clickable:active {
+  transform: scale(0.98);
+}
+
+/* Transições para links de navegação */
+.nav-link {
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.nav-link:hover {
+  transform: translateY(-1px);
+}
+
+.nav-link:active {
+  transform: translateY(0);
+}

@@ -30,9 +30,9 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center gap-3">
               <img 
-                src="/lovable-uploads/357358c2-8fb6-4288-b5d9-dd92bb3c9f7c.png" 
+                src="/lovable-uploads/c8b5c903-7ea7-4e7c-a757-e7c62db2550d.png" 
                 alt="FraterBots Logo" 
-                className="h-12 w-auto object-contain"
+                className="h-16 w-auto object-contain"
               />
             </div>
             <p className="text-gray-300 text-sm">
@@ -130,7 +130,7 @@ const Footer = () => {
             © {new Date().getFullYear()} FraterBots. Todos os direitos reservados.
           </p>
           <p className="text-gray-400 text-xs mt-2">
-            Desenvolvido com ❤️ para revolucionar seu atendimento digital.
+            Uma solução Frater Bots — inovação e performance em atendimento digital.
           </p>
         </div>
       </div>
