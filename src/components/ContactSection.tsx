@@ -106,11 +106,14 @@ const ContactSection = () => {
       <div className="container mx-auto px-4 relative">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-fade-in text-white">
-              <Mail className="inline mr-3 h-8 w-8 text-primary animate-float" />
-              Entre em Contato
+            <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-1.5 mb-4">
+              <Mail className="h-4 w-4 text-primary" />
+              <span className="text-primary text-sm font-semibold">Fale conosco</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+              Entre em <span className="text-primary">Contato</span>
             </h2>
-            <p className="text-xl text-gray-200">
+            <p className="text-lg text-gray-300">
               Pronto para transformar seu negócio? Solicite contato de um de nossos especialistas!
             </p>
           </div>
@@ -138,7 +141,7 @@ const ContactSection = () => {
                       name="name"
                       value={formData.name}
                       onChange={handleInputChange}
-                      className="w-full mt-1 px-3 py-2 border border-input rounded-md bg-background hover:border-primary transition-colors text-white"
+                      className="w-full mt-1 px-3 py-2 border border-input rounded-md bg-background hover:border-primary focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-colors text-white"
                       placeholder="Seu nome"
                       required
                     />
@@ -153,7 +156,7 @@ const ContactSection = () => {
                       name="whatsapp"
                       value={formData.whatsapp}
                       onChange={handleInputChange}
-                      className="w-full mt-1 px-3 py-2 border border-input rounded-md bg-background hover:border-primary transition-colors text-white"
+                      className="w-full mt-1 px-3 py-2 border border-input rounded-md bg-background hover:border-primary focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-colors text-white"
                       placeholder="(38) 99999-9999"
                       required
                     />
@@ -168,7 +171,7 @@ const ContactSection = () => {
                       name="company"
                       value={formData.company}
                       onChange={handleInputChange}
-                      className="w-full mt-1 px-3 py-2 border border-input rounded-md bg-background hover:border-primary transition-colors text-white"
+                      className="w-full mt-1 px-3 py-2 border border-input rounded-md bg-background hover:border-primary focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-colors text-white"
                       placeholder="Nome da sua empresa"
                     />
                   </div>
@@ -181,7 +184,7 @@ const ContactSection = () => {
                       name="message"
                       value={formData.message}
                       onChange={handleInputChange}
-                      className="w-full mt-1 px-3 py-2 border border-input rounded-md bg-background hover:border-primary transition-colors text-white"
+                      className="w-full mt-1 px-3 py-2 border border-input rounded-md bg-background hover:border-primary focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary transition-colors text-white resize-none"
                       rows={3}
                       placeholder="Descreva suas necessidades..."
                       required

@@ -9,9 +9,12 @@ const AboutSection = () => {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(25,20,61,0.1),transparent_50%)]"></div>
       <div className="container mx-auto px-4 relative">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-fade-in text-white">
-            <Shield className="inline mr-3 h-8 w-8 text-primary animate-float" />
-            Nossa História
+          <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-1.5 mb-4">
+            <Shield className="h-4 w-4 text-primary" />
+            <span className="text-primary text-sm font-semibold">Quem somos</span>
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+            Nossa <span className="text-primary">História</span>
           </h2>
           <p className="text-xl text-gray-200 max-w-4xl mx-auto">
             Em 2024, dois irmãos com talentos complementares decidiram transformar a forma como pequenas e médias empresas acessam a tecnologia.
@@ -45,7 +48,7 @@ const AboutSection = () => {
             </CardHeader>
             <CardContent className="p-6">
               <p className="text-gray-200">
-                <Brain className="inline mr-2 h-5 w-5 text-primary animate-pulse" />
+                <Brain className="inline mr-2 h-5 w-5 text-primary" />
                 O cérebro técnico da FraterBots, Gustavo é responsável por toda a arquitetura 
                 e desenvolvimento dos chatbots. Sua expertise em programação e integrações com 
                 WhatsApp e Instagram permite criar soluções robustas que realmente funcionam. 
@@ -71,7 +74,7 @@ const AboutSection = () => {
             </CardHeader>
             <CardContent className="p-6">
               <p className="text-gray-200">
-                <Zap className="inline mr-2 h-5 w-5 text-primary animate-pulse" />
+                <Zap className="inline mr-2 h-5 w-5 text-primary" />
                 O visionário criativo da dupla, Marcelo transforma ideias complexas em experiências 
                 intuitivas e visualmente impactantes. Ele cuida de toda a identidade visual e 
                 experiência do usuário, garantindo que cada chatbot não seja apenas funcional, 
@@ -93,7 +96,7 @@ const AboutSection = () => {
             comunicam com seus clientes através de chatbots personalizados para WhatsApp, Instagram 
             e outras plataformas.
           </p>
-          <Badge variant="outline" className="text-primary border-primary animate-pulse bg-primary/10">
+          <Badge variant="outline" className="text-primary border-primary bg-primary/10">
             <Globe className="mr-2 h-4 w-4 text-primary" />
             Atendemos todo o norte de Minas Gerais • Desde 2024
           </Badge>

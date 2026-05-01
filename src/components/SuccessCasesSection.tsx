@@ -134,11 +134,14 @@ const SuccessCasesSection = () => {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(25,20,61,0.1),transparent_50%)]"></div>
       <div className="container mx-auto px-4 relative">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-fade-in text-white">
-            <Trophy className="inline mr-3 h-8 w-8 text-primary animate-float" />
-            Transforme Seu Atendimento
+          <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-1.5 mb-4">
+            <Trophy className="h-4 w-4 text-primary" />
+            <span className="text-primary text-sm font-semibold">Resultados reais</span>
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+            Transforme Seu <span className="text-primary">Atendimento</span>
           </h2>
-          <p className="text-xl text-gray-200">
+          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
             Resultados reais de pequenas e médias empresas que transformaram seus negócios conosco
           </p>
         </div>

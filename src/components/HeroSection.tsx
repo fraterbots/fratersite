@@ -92,7 +92,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
         </div>
 
         {/* Floating Chat Components - Better positioned */}
-        <div className="absolute top-32 left-4 animate-float hidden xl:block">
+        <div className="absolute top-32 left-4 animate-float hidden lg:block">
           <div className="bg-gradient-to-br from-slate-800/95 to-slate-900/95 backdrop-blur-xl rounded-2xl p-4 border border-primary/30 shadow-xl max-w-xs">
             <div className="flex items-center gap-3 mb-3">
               <div className="w-8 h-8 bg-gradient-to-r from-primary to-green-400 rounded-full flex items-center justify-center">
@@ -109,7 +109,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
           </div>
         </div>
 
-        <div className="absolute top-32 right-4 animate-float hidden xl:block" style={{animationDelay: '1.5s'}}>
+        <div className="absolute top-32 right-4 animate-float hidden lg:block" style={{animationDelay: '1.5s'}}>
           <div className="bg-gradient-to-br from-slate-800/95 to-slate-900/95 backdrop-blur-xl rounded-2xl p-4 border border-accent/30 shadow-xl max-w-xs">
             <div className="flex items-center gap-3 mb-3">
               <div className="w-8 h-8 bg-gradient-to-r from-accent to-primary rounded-full flex items-center justify-center">
@@ -126,7 +126,7 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
           </div>
         </div>
 
-        <div className="absolute bottom-60 left-4 animate-float hidden xl:block" style={{animationDelay: '3s'}}>
+        <div className="absolute bottom-60 left-4 animate-float hidden lg:block" style={{animationDelay: '3s'}}>
           <div className="bg-gradient-to-br from-slate-800/95 to-slate-900/95 backdrop-blur-xl rounded-2xl p-4 border border-primary/30 shadow-xl max-w-xs">
             <div className="flex items-center gap-3 mb-3">
               <div className="w-8 h-8 bg-gradient-to-r from-green-400 to-primary rounded-full flex items-center justify-center">

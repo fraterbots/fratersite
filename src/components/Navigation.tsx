@@ -46,14 +46,16 @@ const Navigation = ({ activeSection, scrollToSection }: NavigationProps) => {
               <button
                 key={section}
                 onClick={() => scrollToSection(section)}
-                className={`nav-link text-sm font-medium transition-all duration-300 ease-out hover:text-primary hover:scale-105 active:scale-95 ${
-                  activeSection === section ? "text-primary" : "text-gray-200"
+                className={`nav-link text-sm font-semibold transition-all duration-300 ease-out hover:text-primary pb-1 border-b-2 active:scale-95 ${
+                  activeSection === section
+                    ? "text-primary border-primary"
+                    : "text-gray-300 border-transparent"
                 }`}
               >
                 {section === "home" && "Home"}
                 {section === "sobre" && "Sobre"}
                 {section === "servicos" && "Serviços"}
-                {section === "casos" && "Transforme Seu Atendimento"}
+                {section === "casos" && "Cases"}
                 {section === "contato" && "Contato"}
               </button>
             ))}
@@ -90,14 +92,16 @@ const Navigation = ({ activeSection, scrollToSection }: NavigationProps) => {
                 <button
                   key={section}
                   onClick={() => handleMenuClick(section)}
-                  className={`text-left text-sm font-medium transition-all duration-300 ease-out hover:text-primary hover:translate-x-2 active:scale-95 px-2 py-1 ${
-                    activeSection === section ? "text-primary" : "text-gray-200"
+                  className={`text-left text-sm font-semibold transition-all duration-300 ease-out hover:text-primary hover:translate-x-2 active:scale-95 px-2 py-2 border-l-2 ${
+                    activeSection === section
+                      ? "text-primary border-primary pl-4"
+                      : "text-gray-300 border-transparent"
                   }`}
                 >
                   {section === "home" && "Home"}
                   {section === "sobre" && "Sobre"}
                   {section === "servicos" && "Serviços"}
-                  {section === "casos" && "Transforme Seu Atendimento"}
+                  {section === "casos" && "Cases"}
                   {section === "contato" && "Contato"}
                 </button>
               ))}
