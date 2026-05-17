@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Bot, ChevronRight, Sparkles, Target, Eye, Brain, Cpu, Zap, MessageCircle, ArrowDown } from "lucide-react";
+import { Bot, ChevronRight, Sparkles, Eye, Brain, Cpu, Zap, MessageCircle, ArrowDown, Globe, TrendingUp } from "lucide-react";
 
 interface HeroSectionProps {
   scrollToSection: (sectionId: string) => void;
@@ -9,7 +9,7 @@ interface HeroSectionProps {
 
 const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
   const handleWhatsAppClick = () => {
-    const message = encodeURIComponent("Olá! Gostaria de conversar com o FraterAssist sobre os chatbots da FraterBots!");
+    const message = encodeURIComponent("Olá! Gostaria de conversar com o FraterAssist sobre as soluções da FraterBots!");
     const whatsappUrl = `https://wa.me/5538991003466?text=${message}`;
     window.open(whatsappUrl, '_blank');
   };
@@ -50,22 +50,21 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
           <div className="space-y-4">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight">
               <span className="block text-white animate-slide-up mb-4">
-                O Futuro da
+                Tecnologia e IA que
               </span>
               <span className="block text-primary animate-fade-in font-extrabold text-shadow-lg">
-                Automação
+                Transformam
               </span>
               <span className="block text-white animate-slide-up mt-4" style={{animationDelay: '1s'}}>
-                Chegou
+                Seu Negócio
               </span>
             </h1>
           </div>
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl lg:text-3xl text-gray-200 max-w-4xl mx-auto leading-relaxed animate-fade-in" style={{animationDelay: '1.5s'}}>
-            <Bot className="inline mr-3 h-8 w-8 text-primary animate-float" />
-            Transformamos sua empresa com chatbots inteligentes que revolucionam 
-            <span className="text-primary font-semibold"> a comunicação empresarial</span>
+            Sites, landing pages, chatbots, CRM e plataformas com
+            <span className="text-primary font-semibold"> inteligência artificial aplicada ao marketing</span>
           </p>
 
           {/* Action Buttons */}
@@ -91,20 +90,20 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
           </div>
         </div>
 
-        {/* Floating Chat Components - Better positioned */}
+        {/* Floating Cards */}
         <div className="absolute top-32 left-4 animate-float hidden lg:block">
           <div className="bg-gradient-to-br from-slate-800/95 to-slate-900/95 backdrop-blur-xl rounded-2xl p-4 border border-primary/30 shadow-xl max-w-xs">
             <div className="flex items-center gap-3 mb-3">
               <div className="w-8 h-8 bg-gradient-to-r from-primary to-green-400 rounded-full flex items-center justify-center">
-                <MessageCircle className="h-4 w-4 text-black" />
+                <Globe className="h-4 w-4 text-black" />
               </div>
               <div>
-                <p className="text-white text-sm font-medium">WhatsApp Bot</p>
-                <p className="text-primary text-xs font-semibold">Online</p>
+                <p className="text-white text-sm font-medium">Sites & Plataformas</p>
+                <p className="text-primary text-xs font-semibold">Entregando</p>
               </div>
             </div>
             <p className="text-gray-200 text-sm">
-              ✨ Automatize 95% do seu atendimento
+              🌐 Do briefing ao ar em tempo recorde
             </p>
           </div>
         </div>
@@ -116,12 +115,12 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
                 <Brain className="h-4 w-4 text-white" />
               </div>
               <div>
-                <p className="text-white text-sm font-medium">IA Avançada</p>
-                <p className="text-primary text-xs font-semibold">Aprendendo</p>
+                <p className="text-white text-sm font-medium">IA Aplicada</p>
+                <p className="text-primary text-xs font-semibold">Ativa</p>
               </div>
             </div>
             <p className="text-gray-200 text-sm">
-              🚀 Respostas inteligentes 24/7
+              🤖 Chatbots, CRM e marketing com IA
             </p>
           </div>
         </div>
@@ -130,15 +129,15 @@ const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
           <div className="bg-gradient-to-br from-slate-800/95 to-slate-900/95 backdrop-blur-xl rounded-2xl p-4 border border-primary/30 shadow-xl max-w-xs">
             <div className="flex items-center gap-3 mb-3">
               <div className="w-8 h-8 bg-gradient-to-r from-green-400 to-primary rounded-full flex items-center justify-center">
-                <Cpu className="h-4 w-4 text-black" />
+                <TrendingUp className="h-4 w-4 text-black" />
               </div>
               <div>
-                <p className="text-white text-sm font-medium">Automação</p>
-                <p className="text-primary text-xs font-semibold">Ativo</p>
+                <p className="text-white text-sm font-medium">Resultados Reais</p>
+                <p className="text-primary text-xs font-semibold">Comprovados</p>
               </div>
             </div>
             <p className="text-gray-200 text-sm">
-              ⚡ Eficiência aumentada em 300%
+              ⚡ Vendas e conversões acima da média
             </p>
           </div>
         </div>

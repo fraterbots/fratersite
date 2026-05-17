@@ -1,18 +1,18 @@
 
-import { Bot, MessageCircle, Cog, ChevronRight, Instagram, Sparkles, Brain, Link as LinkIcon, Zap, Globe, Palette } from "lucide-react";
+import { Bot, MessageCircle, Cog, ChevronRight, Instagram, Sparkles, Brain, Link as LinkIcon, Globe, Palette, BarChart3, Users } from "lucide-react";
 
 const services = [
   {
     number: "01",
     icon: MessageCircle,
     secondIcon: Bot,
-    title: "Chatbots para WhatsApp",
-    description: "Chatbots inteligentes e personalizados para automatizar seu atendimento no WhatsApp",
+    title: "Chatbots Inteligentes",
+    description: "Automação de atendimento no WhatsApp e Instagram com IA para escalar sua operação sem escalar sua equipe",
     items: [
-      "Atendimento 24/7 automatizado",
-      "Integração com WhatsApp Business",
-      "Respostas inteligentes personalizadas",
-      "Integração com as principais IAs",
+      "Atendimento 24/7 no WhatsApp e Instagram",
+      "Integração com WhatsApp Business API",
+      "Respostas personalizadas com IA generativa",
+      "Captação e qualificação automática de leads",
     ],
     borderColor: "border-t-primary",
     iconBg: "bg-primary/15",
@@ -21,32 +21,15 @@ const services = [
   },
   {
     number: "02",
-    icon: Instagram,
+    icon: Globe,
     secondIcon: Sparkles,
-    title: "Automação para Instagram",
-    description: "Automatize respostas e interações no Instagram para aumentar o engajamento",
+    title: "Sites & Plataformas Digitais",
+    description: "Desenvolvimento de sites institucionais, e-commerces e plataformas sob medida com foco em performance e experiência do usuário",
     items: [
-      "Resposta automática em Direct",
-      "Comentários automatizados",
-      "Captação de leads via stories",
-      "Integração com catálogo",
-    ],
-    borderColor: "border-t-purple-400",
-    iconBg: "bg-purple-500/15",
-    iconColor: "text-purple-400",
-    numberColor: "text-purple-400/30",
-  },
-  {
-    number: "03",
-    icon: LinkIcon,
-    secondIcon: Brain,
-    title: "Integrações Avançadas",
-    description: "Conecte seus sistemas e ferramentas para máxima eficiência operacional",
-    items: [
-      "CRM e sistemas de gestão",
-      "E-commerce e marketplaces",
-      "APIs personalizadas",
-      "Sincronização de dados",
+      "Sites institucionais e corporativos",
+      "E-commerce e lojas virtuais",
+      "Plataformas SaaS e portais web",
+      "Design responsivo e SEO otimizado",
     ],
     borderColor: "border-t-sky-400",
     iconBg: "bg-sky-500/15",
@@ -54,21 +37,72 @@ const services = [
     numberColor: "text-sky-400/30",
   },
   {
-    number: "04",
+    number: "03",
     icon: Palette,
-    secondIcon: Globe,
-    title: "Criação de Landing Pages",
-    description: "Desenvolva páginas otimizadas para conversão e integradas aos seus chatbots",
+    secondIcon: BarChart3,
+    title: "Landing Pages de Alta Conversão",
+    description: "Páginas estratégicas projetadas para transformar visitantes em clientes, integradas a chatbots e ferramentas de marketing",
     items: [
-      "Design responsivo e moderno",
-      "Otimização para conversão",
-      "Integração com chatbots",
-      "Analytics e acompanhamento",
+      "Design orientado a conversão",
+      "Integração com chatbots e CRM",
+      "Analytics e rastreamento de eventos",
+      "Testes e otimização contínua",
     ],
     borderColor: "border-t-amber-400",
     iconBg: "bg-amber-500/15",
     iconColor: "text-amber-400",
     numberColor: "text-amber-400/30",
+  },
+  {
+    number: "04",
+    icon: Users,
+    secondIcon: Brain,
+    title: "CRM & Automação de Vendas",
+    description: "Implantação e personalização de CRM com fluxos de automação para nutrir leads, fechar mais vendas e fidelizar clientes",
+    items: [
+      "Implantação e configuração de CRM",
+      "Funis de vendas automatizados",
+      "Gestão de leads e oportunidades",
+      "Dashboards e relatórios em tempo real",
+    ],
+    borderColor: "border-t-purple-400",
+    iconBg: "bg-purple-500/15",
+    iconColor: "text-purple-400",
+    numberColor: "text-purple-400/30",
+  },
+  {
+    number: "05",
+    icon: BarChart3,
+    secondIcon: Sparkles,
+    title: "Marketing Digital com IA",
+    description: "Estratégias e campanhas de marketing potencializadas por inteligência artificial para alcançar o público certo na hora certa",
+    items: [
+      "Estratégia e conteúdo gerado por IA",
+      "Automação de campanhas multicanal",
+      "Segmentação inteligente de audiências",
+      "Análise de dados e otimização de ROI",
+    ],
+    borderColor: "border-t-rose-400",
+    iconBg: "bg-rose-500/15",
+    iconColor: "text-rose-400",
+    numberColor: "text-rose-400/30",
+  },
+  {
+    number: "06",
+    icon: LinkIcon,
+    secondIcon: Globe,
+    title: "Integrações & APIs",
+    description: "Conectamos todos os seus sistemas e ferramentas para criar um ecossistema digital fluido e sem retrabalho",
+    items: [
+      "APIs personalizadas e webhooks",
+      "Integração entre plataformas e ERPs",
+      "Automações entre ferramentas",
+      "Sincronização e centralização de dados",
+    ],
+    borderColor: "border-t-teal-400",
+    iconBg: "bg-teal-500/15",
+    iconColor: "text-teal-400",
+    numberColor: "text-teal-400/30",
   },
 ];
 
@@ -89,7 +123,7 @@ const ServicesSection = () => {
             Nossos <span className="text-primary">Serviços</span>
           </h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            Soluções completas em automação e chatbots para WhatsApp, Instagram e outras plataformas
+            Do site ao CRM, do chatbot ao marketing — soluções digitais completas com inteligência artificial para fazer seu negócio crescer
           </p>
           <p className="mt-3 text-primary font-semibold text-sm">
             💡 Combine serviços e ganhe um desconto especial!
@@ -97,7 +131,7 @@ const ServicesSection = () => {
         </div>
 
         {/* Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service) => (
             <div
               key={service.number}
